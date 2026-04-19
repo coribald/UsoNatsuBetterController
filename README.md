@@ -2,7 +2,7 @@
 
 A small BepInEx plugin that improves controller support for the Unity Mono version of UsoNatsu.
 
-It keeps the game's existing Naninovel input where possible, remaps a few buttons to more common VN bindings, adds a non-native English/Japanese language toggle on `R3`, seeds UI focus when menus open, and adds custom controller handling for screens that were mouse-only or only partly controller-aware.
+It keeps the game's existing Naninovel input where possible, remaps a few buttons to more common VN bindings, adds an English/Japanese language toggle on `R3`, seeds UI focus when menus open, and adds custom controller handling for screens that were mouse-only or only partly controller-aware.
 
 ## Mappings
 
@@ -35,14 +35,6 @@ When backlog or save/load is open:
 
 Outside backlog and save/load, `RB` toggles skip as normal.
 
-## How It Works
-
-- Waits for Naninovel to initialize.
-- Edits the live Naninovel input bindings to remap a few controller actions.
-- Calls Naninovel's localization manager directly to switch locales, adding a non-native English/Japanese toggle on `R3`.
-- Finds visible managed UI screens and seeds the first interactable `Selectable` when needed.
-- Drives `ScrollRect.verticalNormalizedPosition` for backlog and save/load so those screens can be used without a mouse wheel.
-
 ## Build
 
 1. Open a terminal in `UsoNatsuBetterController`.
@@ -68,3 +60,11 @@ The output DLL will be:
 
 - This plugin targets the exported Unity Mono/Naninovel build the mod was developed against.
 - Trigger axes and d-pads are inconsistent across Unity legacy input setups, so `LB` / `RB` scrolling is the primary path.
+
+## How It Works
+
+- Waits for Naninovel to initialize.
+- Edits the live Naninovel input bindings to remap a few controller actions.
+- Calls Naninovel's localization manager directly to switch locales, adding an English/Japanese toggle on `R3`.
+- Finds visible managed UI screens and seeds the first interactable `Selectable` when needed.
+- Drives `ScrollRect.verticalNormalizedPosition` for backlog and save/load so those screens can be used without a mouse wheel.
