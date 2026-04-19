@@ -1,9 +1,9 @@
 # UsoNatsuBetterController
 
-A small BepInEx plugin that improves controller support for the Unity Mono version of UsoNatsu.
+A small BepInEx-based mod that improves controller support for the PC release of UsoNatsu.
 
 It keeps the game's existing Naninovel input where possible, remaps a few buttons to more common VN bindings, adds an English/Japanese language toggle on `R3`, seeds UI focus when menus open, and adds custom controller handling for screens that were mouse-only or only partly controller-aware.
-
+ 
 ## Mappings
 
 - `A`: native confirm / advance
@@ -19,10 +19,9 @@ It keeps the game's existing Naninovel input where possible, remaps a few button
 
 ## Menu Behavior
 
-- Title menu focus is automatically seeded so the left stick can navigate it reliably.
-- Pause menu focus is automatically seeded so the left stick can navigate it.
-- Save/load UI focus is automatically seeded when opened from `Select`.
-- Backlog focus is automatically seeded when opened.
+- Title and pause menu focus are automatically seeded so the left stick can navigate them.
+- Backlog and Save/Load UI focus are automatically seeded when opened so the left stick can navigate them.
+- `LB` and `RB` scroll the Backlog and Save/Load menus up and down.
 - `B` now properly closes the pause menu.
 
 ## Scroll Behavior
@@ -46,7 +45,7 @@ $env:DOTNET_CLI_HOME=(Get-Location).Path
 dotnet build .\UsoNatsuBetterController.csproj -c Debug
 ```
 
-The output DLL will be:
+The plugin DLL will be:
 
 - `bin\Debug\UsoNatsuBetterController.dll`
 
@@ -58,8 +57,8 @@ The output DLL will be:
 
 ## Notes
 
-- This plugin targets the exported Unity Mono/Naninovel build the mod was developed against.
-- Trigger axes and d-pads are inconsistent across Unity legacy input setups, so `LB` / `RB` scrolling is the primary path.
+- This plugin targets the v1.05 Steam release of the game.
+- Trigger axes and d-pads are inconsistent across Unity legacy input setups, so `LB` / `RB` scrolling was the easiest fallback path I managed.
 
 ## How It Works
 
