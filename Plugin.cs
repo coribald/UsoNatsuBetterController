@@ -17,7 +17,7 @@ namespace UsoNatsuBetterController
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
     public sealed class Plugin : BaseUnityPlugin
     {
-        public const string PluginGuid = "cmarr.usonatsu.better-controller";
+        public const string PluginGuid = "cbld.usonatsu.better-controller";
         public const string PluginName = "UsoNatsu Better Controller";
         public const string PluginVersion = "1.0.0";
 
