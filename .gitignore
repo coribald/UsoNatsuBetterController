@@ -1,5 +1,7 @@
 bin/
 obj/
 lib/*
+Assembly-CSharp/
+.dotnet/
 .vs/
 .vscode/
