@@ -52,8 +52,6 @@ The plugin DLL will be:
 ## Install
 
 1. Copy `bin\Debug\UsoNatsuBetterController.dll` into your game's `BepInEx\plugins\` folder.
-2. Launch the game once to generate the config file.
-3. Optional: adjust values in `BepInEx\config\cmarr.usonatsu.better-controller.cfg`.
 
 ## Notes
 
